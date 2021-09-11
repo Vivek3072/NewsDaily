@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import news from "../news.png";
-// import PropTypes from 'prop-types'
 
 export class Navbar extends Component {
-  // static propTypes = {
-
-  // }
 
   render() {
     return (

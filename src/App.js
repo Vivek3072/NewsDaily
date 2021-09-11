@@ -5,12 +5,11 @@ import News from './components/News';
 import Footer from './components/Footer';
 
 export default class App extends Component {
-  c="newsapp";
   render() {
     return (
       <>
       <Navbar/>
-      <News />
+      <News pageSize={3}/>
       <Footer/>
       </>
     )
