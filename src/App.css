@@ -1,13 +1,9 @@
-
 .App-link {
   color: #61dafb;
 }
-
-
 .heading{
   animation: headinganimate 3s linear 1s infinite alternate slidein;
 }
-
 
 @keyframes headinganimate {
   from {

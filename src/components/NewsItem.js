@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Loading from "../Loading.png";
 
-export class NewsItem extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl } = this.props;
+const NewsItem =(props)=>{
     return (
       <>
         <div
@@ -17,26 +15,26 @@ export class NewsItem extends Component {
         >
           <div className="card my-3" style={{ width: "18rem" }}>
               <img
-                src={imageUrl?imageUrl:Loading}
+                src={props.imageUrl?props.imageUrl:Loading}
                 style={{width:"288px" , height :"150px"}}
                 className="card-img-top"
                 alt="News Related Pic"
               />    
             <div className="card-body">
               <h5 className="card-title">
-                {title.length > 45 ? title.slice(0, 45) + "..." : title}
+                {props.title.length > 45 ? props.title.slice(0, 45) + "..." : props.title}
               </h5>
               <p className="card-text">
-                {description.length > 95
-                  ? description.slice(0, 94)
-                  : description}
+                {props.description.length > 95
+                  ? props.description.slice(0, 94)
+                  : props.description}
                 <span className="fw-light">
                  
-                   {description.length ===0 ? "Click on the Read More button to find out more details about the news." :  description.length > 95 ? "...Read more" : "" }
+                   {props.description.length ===0 ? "Click on the Read More button to find out more details about the news." :  props.description.length > 95 ? "...Read more" : "" }
                 </span>
               </p>
               <a
-                href={newsUrl}
+                href={props.newsUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="btn rounded btn-sm btn-primary"
@@ -49,6 +47,5 @@ export class NewsItem extends Component {
       </>
     );
   }
-}
 
 export default NewsItem;
